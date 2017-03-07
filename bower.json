@@ -1,0 +1,20 @@
+{
+  "name": "sample-ang",
+  "description": "A smaple angular application to learn gulp, less and other angular concepts",
+  "main": "index.js",
+  "authors": [
+    "Malhar Deshpande"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2"
+  }
+}
