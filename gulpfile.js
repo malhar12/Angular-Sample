@@ -9,12 +9,12 @@
 
   gulp.task('jshint', function(){
     return gulp.src()
-               .pipe(jshint('app/**/*.js'))
+               .pipe(jshint('app/scripts/**/*.js'))
                .pipe(jshint.reporter('jshint-stylish'));
   });
 
   gulp.task('watch', function(){
-    gulp.watch('app/**/*.js', ['jshint']);
+    gulp.watch('app/scripts/**/*.js', ['jshint']);
   });
 
 })();
