@@ -10,10 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-inject": "^4.2.0",
     "gulp-jshint": "^2.0.4",
     "gulp-livereload": "^3.8.1",
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.4",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "wiredep": "^4.0.0"
   }
 }
