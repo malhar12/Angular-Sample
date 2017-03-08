@@ -7,13 +7,6 @@
       connect = require('gulp-connect'),
       wiredep = require('wiredep').stream,
       inject = require('gulp-inject');
-      // map = require('map-stream'),
-      // exitOnJShintError = map(function(file, cb){
-      //   if(!file.jshint.success){
-      //     console.error('jshint failed');
-      //     process.exit(1);
-      //   }
-      // });
 
   gulp.task('connect', function(){
     connect.server({
@@ -23,14 +16,13 @@
     });
   });
 
-  gulp.task('bower-wiredep', function(){
-    gulp.src('app/styles/**/*.css')
-        .pipe(wiredep({devDependencies: true}))
-        .pipe(gulp.dest('app/styles'));
-
-    gulp.src('app/scripts/**/*.js')
-        .pipe(wiredep({devDependencies: true}))
-        .pipe(gulp.dest('app/scripts'));
+  gulp.task('wiredep', function(){
+    gulp.src('app/views/index.html')
+        .pipe(wiredep({
+          optional: 'configuration',
+          goes: 'here'
+    }))
+    .pipe(gulp.dest('app/views'));
   });
 
   gulp.task('inject', function(){
@@ -64,7 +56,7 @@
     gulp.watch('app/scripts/**/*.js', ['js']);
   });
 
-  gulp.task('serve', ['connect', 'jshint', 'inject', 'bower-wiredep', 'watch']);
+  gulp.task('serve', ['connect', 'jshint', 'inject', 'wiredep', 'watch']);
 
 
 })();

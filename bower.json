@@ -17,5 +17,10 @@
   "dependencies": {
     "angular": "^1.6.2",
     "bootstrap": "v4.0.0-alpha.6"
+  },
+  "overrides":{
+    "bootstrap": {
+      "main": "dist/css/bootstrap.css"
+    }
   }
 }
