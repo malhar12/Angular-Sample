@@ -14,9 +14,9 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "angular": "^1.6.2",
-    "bootstrap": "v4.0.0-alpha.6"
+  "dependencies": {    
+    "bootstrap": "v4.0.0-alpha.6",
+    "angular": "^1.6.2"
   },
   "overrides":{
     "bootstrap": {
