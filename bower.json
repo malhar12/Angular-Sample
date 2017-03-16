@@ -14,7 +14,13 @@
     "test",
     "tests"
   ],
-  "dependencies": {
+  "dependencies": {    
+    "bootstrap": "v4.0.0-alpha.6",
     "angular": "^1.6.2"
+  },
+  "overrides":{
+    "bootstrap": {
+      "main": "dist/css/bootstrap.css"
+    }
   }
 }
