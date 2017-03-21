@@ -2,7 +2,7 @@
   'use strict';
 
   module.exports = {
-    'dbConnectionString': 'mongodb://localhost:27017/urlRepo'
+    'dbConnectionString': 'mongodb://malhar12:Ciavskgb@18@ds137230.mlab.com:37230/urlrepo'
   };
-  
+
 })();

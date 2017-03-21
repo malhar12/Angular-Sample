@@ -6,11 +6,11 @@
 
       logSchema = new Schema({
         visited_at: Date,
-        urlHash: {type: String, required: true}
-      }),
+        urlHash: {type: String, required: true},
+        location: {type: String},
+        clickBool: {type: Boolean}
+      });
 
-      Log = mongoose.model('Log', userSchema);
-
-      module.exports = Log;
+      module.exports = logSchema;
 
 })();
