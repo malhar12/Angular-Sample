@@ -4,7 +4,6 @@
   var gulp = require('gulp'),
       gutil = require('gulp-util'),
       jshint = require('gulp-jshint'),
-      connect = require('gulp-connect'),
       wiredep = require('wiredep').stream,
       inject = require('gulp-inject'),
       clean = require('gulp-clean'),
@@ -24,13 +23,21 @@
         images: ['app/images/**/*.png']
       };
 
-  gulp.task('connect', function(){
-    connect.server({
-      root: 'app',
-      port: 9000,
-      livereload: true
-    });
-  });
+  // gulp.task('connect', function(){
+  //   var serveStatic = require('serve-static'),
+  //       serveIndex = require('serve-index'),
+  //       app = require('connect')()
+  //             .use(require('connect-livereload')({port:35729}))
+  //             .use(serveStatic('.tmp'))
+  //             .use(serveStatic('app'))
+  //             .use('/bower_components', serveStatic('bower_components'))
+  //             .use(serveIndex('app'));
+  //
+  //       require('http').createServer(app)
+  //         .listen(9000, function() {
+  //           console.log('Started -xxx-connect web server on http://localhost:9000');
+  //         });
+  // });
 
   gulp.task('wiredep', function(){
     gulp.src('app/views/index.html')
@@ -78,10 +85,10 @@
                .pipe(concatJS('bundle.js'))
                .pipe(gulp.dest(bases.dist + 'scripts'))
                .pipe(uglify())
-               pipe(gulp.dest(bases.dist + 'scripts'));
+               .pipe(gulp.dest(bases.dist + 'scripts'));
   });
 
-  gulp.task('serve', ['connect', 'jshint', 'inject', 'wiredep', 'watch']);
+  gulp.task('serve', ['jshint', 'inject', 'wiredep', 'watch']);
 
   // Build Distribution/Publish Folder for application
 
